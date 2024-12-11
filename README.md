@@ -1,19 +1,19 @@
 # Weather-Dashboard
 A web app where users can enter a city name and get the current weather using a public API like OpenWeatherMap.
 
-1. URL Shortener
+2. Weather Dashboard
 
 Description
 
-A simple URL shortening service where users can input a long URL and receive a short, unique link that redirects to the original URL.
+A web-based weather dashboard where users can enter a city name and get the current weather using the OpenWeatherMap API.
 
 Features
 
-Input a long URL and generate a shortened version.
+Input a city name to fetch weather data.
 
-Redirect to the original URL using the shortened link.
+Displays the temperature, city name, and weather condition.
 
-In-memory storage for simplicity (no database).
+Fetches real-time data using OpenWeatherMap API.
 
 Technologies Used
 
@@ -22,6 +22,8 @@ Python
 Flask
 
 HTML/CSS (Bootstrap for styling)
+
+OpenWeatherMap API
 
 Installation Instructions
 
@@ -36,7 +38,9 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 Install dependencies:
 
-pip install flask
+pip install flask requests
+
+Obtain an API key from OpenWeatherMap and replace your_openweathermap_api_key in app.py with your key.
 
 Run the application:
 
@@ -46,12 +50,12 @@ Open your browser and visit http://127.0.0.1:5000/.
 
 Usage
 
-Enter a long URL in the input field and click "Shorten".
+Enter a city name in the input field and click "Get Weather".
 
-A shortened URL will be displayed, which you can use to redirect to the original URL.
+The app will display the current temperature and weather condition for the specified city.
 
 File Structure
-url_shortener/
+weather_dashboard/
 ├── app.py
 ├── templates/
 │   └── index.html
